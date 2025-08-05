@@ -1,0 +1,40 @@
+# Claude Code RC for issue31403
+
+This is a claudette-managed Apache Superset development environment.
+
+## Project: issue31403
+- Worktree Path: /Users/evan_1/.claudette/worktrees/issue31403
+- Frontend Port: 9001
+- Frontend URL: http://localhost:9001
+
+## Quick Commands
+
+Start services:
+```bash
+claudette docker up
+```
+
+Access frontend:
+```bash
+open http://localhost:9001
+```
+
+Run tests:
+```bash
+# Backend
+pytest tests/unit_tests/
+
+# Frontend
+cd superset-frontend && npm test
+```
+
+## Environment Details
+- Python venv: `.venv/` (auto-activated in claudette shell)
+- Node modules: `superset-frontend/node_modules/`
+- Docker prefix: `issue31403_`
+
+## Development Tips
+- Always use `claudette shell` to work in this project
+- Run `pre-commit run --all-files` before committing
+- Use `claudette docker` instead of docker-compose directly
+- The frontend dev server runs on port 9001 to avoid conflicts
